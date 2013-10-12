@@ -6,8 +6,6 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
-import com.cernet.s2sh.dao.ArticleDao;
-
 public class TestTask extends QuartzJobBean {
 
 	@Override
