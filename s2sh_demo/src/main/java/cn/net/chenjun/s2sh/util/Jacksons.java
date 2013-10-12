@@ -1,4 +1,4 @@
-package com.cernet.s2sh.util;
+package cn.net.chenjun.s2sh.util;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
