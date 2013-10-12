@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC 
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.action.extension" value="html"></constant>
+	<package name="default" extends="struts-default">
+		<action name="getColsInfo" class="com.cernet.misp.web.action.InterFaceAction"
+			method="getColsInfo"></action>
+
+		<action name="getArticleList" class="com.cernet.misp.web.action.InterFaceAction"
+			method="getArticleList"></action>
+
+		<action name="getArticleContent" class="com.cernet.misp.web.action.InterFaceAction"
+			method="getArticleContent"></action>
+
+		<action name="refreshArticleList" class="com.cernet.misp.web.action.InterFaceAction"
+			method="refreshArticleList"></action>
+			
+		<action name="getMoreArticleList" class="com.cernet.misp.web.action.InterFaceAction"
+			method="getMoreArticleList"></action>
+
+		<action name="submitFeedback" class="com.cernet.misp.web.action.InterFaceAction"
+			method="submitFeedback"></action>
+
+		<action name="getAppVersion" class="com.cernet.misp.web.action.InterFaceAction"
+			method="getAppVersion"></action>
+			
+		<action name="recordUserLog" class="com.cernet.misp.web.action.InterFaceAction"
+			method="recordUserLog"></action>
+		
+		<action name="startGraper" class="com.cernet.misp.web.action.JobAction"
+			method="startGraper">
+			<result>startGraper.jsp</result>
+		</action>
+		
+		<action name="activeUsers" class="com.cernet.misp.web.action.UserLogAction"
+			method="activeUsers">
+			<result>/WEB-INF/jsp/activeUser.jsp</result>
+		</action>
+		
+		<action name="writSVGGraph" class="com.cernet.misp.web.action.UserLogAction"
+			method="writSVGGraph">			
+		</action>
+
+	</package>
+</struts>

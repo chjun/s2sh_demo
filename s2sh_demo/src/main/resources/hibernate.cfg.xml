@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+  	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  	<mapping class="com.cernet.misp.model.Article"/>
+  	<mapping class="com.cernet.misp.model.NewsColumn"/>
+  	<mapping class="com.cernet.misp.model.Feedback"/>
+  	<mapping class="com.cernet.misp.model.AppVersion"/>
+  	<mapping class="com.cernet.misp.model.UserLog"/>
+  </session-factory>
+</hibernate-configuration>

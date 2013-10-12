@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="articleDao" class="com.cernet.misp.dao.impl.ArticleDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="newsColumnDao" class="com.cernet.misp.dao.impl.NewsColumnDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="feedbackDao" class="com.cernet.misp.dao.impl.FeedbackDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="appVersionDao" class="com.cernet.misp.dao.impl.AppVersionDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="userLogDao" class="com.cernet.misp.dao.impl.UserLogDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="articleManager" class="com.cernet.misp.service.impl.ArticleManagerImpl">
+		<property name="articleDao" ref="articleDao"></property>
+	</bean>
+	
+	<bean id="interfaceManager" class="com.cernet.misp.service.impl.InterfaceManagerImpl">
+		<property name="appVersionDao" ref="appVersionDao"></property>
+		<property name="articleDao" ref="articleDao"></property>
+		<property name="newsColumnDao" ref="newsColumnDao"></property>
+		<property name="feedbackDao" ref="feedbackDao"></property>
+		<property name="userLogDao" ref="userLogDao"></property>
+	</bean>
+	
+	<bean id="userLogManagerImpl" class="com.cernet.misp.service.impl.UserLogManagerImpl">
+		<property name="userLogDao" ref="userLogDao"></property>
+	</bean>
+
+</beans>
+
