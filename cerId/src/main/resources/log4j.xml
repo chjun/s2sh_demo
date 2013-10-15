@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="rollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="/usr/misplog/responseRedirectFilter.log" />
+		<param name="append" value="true" />
+		<param name="datePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %m%n" />
+		</layout>
+	</appender>
+
+	<category name="cn.net.chenjun.s2sh.service.impl">
+		<priority value="DEBUG" />
+		<appender-ref ref="rollingFile" />
+	</category>
+
+	<root>
+		<priority value="ERROR" />
+		<appender-ref ref="rollingFile" />
+	</root>
+</log4j:configuration>
