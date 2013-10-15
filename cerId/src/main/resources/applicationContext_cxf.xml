@@ -11,7 +11,8 @@ xsi:schemaLocation="http://cxf.apache.org/jaxws
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 	
-	<bean id="helloWorld" class="cn.net.chenjun.cerId.HelloWorldImpl" />
+	<bean id="helloWorld" class="cn.net.chenjun.cerId.webservice.impl.HelloWorldImpl"
+		/>
 	<jaxws:endpoint id="helloWorldService" implementor="#helloWorld" address="/helloworld"
 		/>
 </beans>
