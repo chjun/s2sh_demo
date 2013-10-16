@@ -4,7 +4,7 @@
 
 	<groupId>cn.net.chenjun</groupId>
 	<artifactId>cerId</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>cerId</name>
 
@@ -80,6 +80,11 @@
 			<groupId>org.apache.directory.studio</groupId>
 			<artifactId>org.slf4j.log4j12</artifactId>
 			<version>1.7.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.15.0-GA</version>
 		</dependency>
 	</dependencies>
 
